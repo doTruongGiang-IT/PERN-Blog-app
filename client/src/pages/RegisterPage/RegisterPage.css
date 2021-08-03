@@ -1,0 +1,89 @@
+.register {
+    margin-top: 80px;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url("https://images.pexels.com/photos/317355/pexels-photo-317355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+}
+  
+.register-title {
+    font-size: 50px;
+}
+  
+.register-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+  
+.register-form > label {
+    margin: 10px 0;
+}
+  
+.register-input {
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+.register-input:invalid {
+    border: 1px solid red;
+}
+
+.register-email-errors,
+.register-password-errors {
+    color: red;
+    display: none;
+}
+
+#email:invalid ~ .register-email-errors,
+#password:invalid ~ .register-password-errors {
+    display: block;
+}
+  
+.register-button {
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.register-button:active {
+    transform: scale(0.9);
+}
+  
+.register-login-button {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    background-color: lightcoral;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.register-login-button:active {
+    transform: scale(0.9);
+}
+
+.register-login-button .link {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}

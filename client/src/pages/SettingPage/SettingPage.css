@@ -1,0 +1,110 @@
+.setting-page {
+    display: flex;
+    margin: 100px 20px 20px 20px;
+}
+
+.setting-page-wrapper {
+    flex: 9;
+    padding: 20px;
+}
+
+.setting-page-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.setting-page-title-update {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: lightcoral;
+}
+  
+.setting-page-title-delete {
+    color: red;
+    font-size: 12px;
+    cursor: pointer;
+}
+  
+.setting-page-form {
+    display: flex;
+    flex-direction: column;
+}
+  
+.setting-page-PP {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+  
+.setting-page-PP > img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+  
+.setting-page-PP-icon {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    margin-left: 10px;
+    color: white;
+    background-color: lightcoral;
+    cursor: pointer;
+}
+  
+.setting-page-form > label {
+    font-size: 20px;
+    margin-top: 20px;
+}
+  
+.setting-page-PP {
+    width: 30%;
+}
+  
+.setting-page-form > input {
+    color: gray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid lightgray;
+}
+  
+.setting-page-submit {
+    align-self: center;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+  
+.setting-page-submit:hover {
+    background-color: rgb(1, 114, 114);
+}
+
+.setting-page-submit:active {
+    transform: scale(0.9);
+}
+
+.status {
+    color: green;
+    text-align: center;
+    font-weight: 500;
+}
