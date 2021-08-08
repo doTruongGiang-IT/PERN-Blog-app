@@ -49,3 +49,15 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
+
+@media (min-width: 414px) and (max-width: 767px) {
+    .post {
+        width: 350px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .post {
+        width: 330px;
+    }
+}

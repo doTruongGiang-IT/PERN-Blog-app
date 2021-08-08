@@ -64,3 +64,29 @@
 .create-submit:active {
     transform:  scale(0.9);
 }
+
+@media (min-width: 414px) and (max-width: 1024px) {
+    .create-post-page {
+        margin: 100px 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .create-input {
+        font-size: 20px;
+    }
+    
+    .create-text {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .create-input {
+        font-size: 30px;
+    }
+    
+    .create-text {
+        font-size: 20px;
+    }
+}

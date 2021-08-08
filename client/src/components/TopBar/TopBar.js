@@ -41,7 +41,18 @@ const TopBar = () => {
         };
     };
 
+    let openSidebarMobile = () => {
+        var sidebar = document.querySelector(".sidebar-mobile");
+        if (sidebar.style.display === "" || sidebar.style.display === "none") sidebar.style.display = "block";
+    };
+
+    let closeSidebarMobile = () => {
+        var sidebar = document.querySelector(".sidebar-mobile");
+        if (sidebar.style.display === "block") sidebar.style.display = "none";
+    };
+
     return (
+        <>
         <div className="top-bar">
             <div className="top-bar-left">
                 <i className="top-icon fab fa-facebook-square"></i>
@@ -75,7 +86,40 @@ const TopBar = () => {
                 <img onClick={checkAuth} className="avatar" src={showProfile()} alt="avatar" />
                 <i className="search-icon fas fa-search"></i>
             </div>
+            <div className="top-bar-mobile">
+                <i onClick={openSidebarMobile} className="top-icon fas fa-bars"></i>
+            </div>
         </div>
+
+        
+        <div className="sidebar-mobile w3-container w3-center w3-animate-right">
+            <h2 onClick={closeSidebarMobile} className="close-sidebar">X</h2>
+            <ul className="top-list-mobile">
+                <li className="top-list-item-mobile">
+                    <Link className="link-mobile" to="/">HOME</Link>
+                </li>
+                <li className="top-list-item-mobile">
+                    <Link className="link-mobile" to="/">ABOUT</Link>
+                </li>
+                <li className="top-list-item-mobile">
+                    <Link className="link-mobile" to="/">CONTACT</Link>
+                </li>
+                <li className="top-list-item-mobile">
+                    <Link className="link-mobile" to="/create">WRITE</Link>
+                </li>
+                {
+                    localStorage.getItem("pern_blog_auth") ?
+                    <li className="top-list-item-mobile">
+                        <Link className="link-mobile" to="/setting">SETTING</Link>
+                    </li>
+                    : null
+                }
+                <li className="top-list-item-mobile">
+                    <img onClick={checkAuth} className="avatar" src={showProfile()} alt="avatar" />
+                </li>
+            </ul>
+        </div>
+        </>
     )
 }
 
